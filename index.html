@@ -1,168 +1,143 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>متجر أدو للورد</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-      background: #ffe6f0;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    h1 {
-      color: #d6336c;
-      margin: 20px 0;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-    .package {
-      background: #fff0f5;
-      border: 2px solid #ffb6c1;
-      border-radius: 15px;
-      padding: 15px;
-      width: 250px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .package:hover {
-      transform: scale(1.05);
-    }
-    .package img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .package h2 {
-      color: #d6336c;
-      margin: 10px 0;
-    }
-    .option-group {
-      margin: 10px 0;
-    }
-    select, input[type=number] {
-      padding: 5px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #d6336c;
-    }
-    button {
-      background-color: #d6336c;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background-color: #ff4d94;
-    }
-    .total-price {
-      font-weight: bold;
-      margin-top: 10px;
-      color: #d6336c;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر أدو | باقات ورد</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffccdd;
+    color: #880033;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+}
+.card img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 10px 0 5px 0;
+    color: #880033;
+}
+.card p {
+    margin: 5px 0;
+    color: #555;
+}
+select, input[type=number] {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #ff6699;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff3366;
+}
+</style>
 </head>
 <body>
 
-<h1>متجر أدو للورد</h1>
+<header>
+    <h1>متجر أدو | باقات ورد</h1>
+</header>
 
 <div class="container">
-  <div class="package" data-base-price="50">
-    <img src="https://i.ibb.co/YdVN2F3/rose1.png" alt="باقة 1" class="package-img">
-    <h2>باقة رومانسية</h2>
-    <div class="option-group">
-      <label>عدد الورود:</label>
-      <input type="number" min="1" max="50" value="5" class="num-roses">
+    <div class="card">
+        <img src="https://i.imgur.com/1A7kKXz.jpg" alt="باقة ورد أحمر">
+        <h3>باقة ورد أحمر</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
     </div>
-    <div class="option-group">
-      <label>لون الورود:</label>
-      <select class="rose-color">
-        <option value="أحمر">أحمر</option>
-        <option value="وردي">وردي</option>
-        <option value="أصفر">أصفر</option>
-        <option value="أبيض">أبيض</option>
-      </select>
-    </div>
-    <div class="option-group">
-      <label>لون التغليف:</label>
-      <select class="wrap-color">
-        <option value="وردي">وردي</option>
-        <option value="أحمر">أحمر</option>
-        <option value="أصفر">أصفر</option>
-        <option value="أزرق">أزرق</option>
-      </select>
-    </div>
-    <div class="total-price">السعر: 50 دولار</div>
-    <button class="buy-btn">شراء</button>
-  </div>
 
-  <div class="package" data-base-price="80">
-    <img src="https://i.ibb.co/T4VZRr1/rose2.png" alt="باقة 2" class="package-img">
-    <h2>باقة فاخرة</h2>
-    <div class="option-group">
-      <label>عدد الورود:</label>
-      <input type="number" min="1" max="50" value="10" class="num-roses">
+    <div class="card">
+        <img src="https://i.imgur.com/3V8qk8U.jpg" alt="باقة ورد وردي">
+        <h3>باقة ورد وردي</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
     </div>
-    <div class="option-group">
-      <label>لون الورود:</label>
-      <select class="rose-color">
-        <option value="أحمر">أحمر</option>
-        <option value="وردي">وردي</option>
-        <option value="أصفر">أصفر</option>
-        <option value="أبيض">أبيض</option>
-      </select>
+
+    <div class="card">
+        <img src="https://i.imgur.com/OH1Bv3k.jpg" alt="باقة ورد أبيض">
+        <h3>باقة ورد أبيض</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
     </div>
-    <div class="option-group">
-      <label>لون التغليف:</label>
-      <select class="wrap-color">
-        <option value="وردي">وردي</option>
-        <option value="أحمر">أحمر</option>
-        <option value="أصفر">أصفر</option>
-        <option value="أزرق">أزرق</option>
-      </select>
-    </div>
-    <div class="total-price">السعر: 80 دولار</div>
-    <button class="buy-btn">شراء</button>
-  </div>
 </div>
-
-<script>
-  const packages = document.querySelectorAll('.package');
-
-  packages.forEach(pkg => {
-    const numInput = pkg.querySelector('.num-roses');
-    const priceDiv = pkg.querySelector('.total-price');
-    const basePrice = parseFloat(pkg.dataset.basePrice);
-
-    function updatePrice() {
-      const num = parseInt(numInput.value);
-      const total = basePrice * num / 5; // السعر الأساسي لكل 5 ورود
-      priceDiv.textContent = `السعر: ${total.toFixed(2)} دولار`;
-    }
-
-    numInput.addEventListener('input', updatePrice);
-
-    pkg.querySelector('.buy-btn').addEventListener('click', () => {
-      const num = numInput.value;
-      const roseColor = pkg.querySelector('.rose-color').value;
-      const wrapColor = pkg.querySelector('.wrap-color').value;
-      const price = priceDiv.textContent;
-
-      alert(`تم شراء ${num} وردة/ورود\nلون الورود: ${roseColor}\nلون التغليف: ${wrapColor}\n${price}`);
-    });
-
-    updatePrice();
-  });
-</script>
 
 </body>
 </html>
+
