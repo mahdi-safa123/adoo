@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر أدو | باقات ورد</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffccdd;
+    color: #880033;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    gap: 20px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+}
+.card img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 10px 0 5px 0;
+    color: #880033;
+}
+.card p {
+    margin: 5px 0;
+    color: #555;
+}
+select, input[type=number] {
+    width: 80%;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    background-color: #ff6699;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff3366;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>متجر أدو | باقات ورد</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="https://i.imgur.com/1A7kKXz.jpg" alt="باقة ورد أحمر">
+        <h3>باقة ورد أحمر</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
+    </div>
+
+    <div class="card">
+        <img src="https://i.imgur.com/3V8qk8U.jpg" alt="باقة ورد وردي">
+        <h3>باقة ورد وردي</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
+    </div>
+
+    <div class="card">
+        <img src="https://i.imgur.com/OH1Bv3k.jpg" alt="باقة ورد أبيض">
+        <h3>باقة ورد أبيض</h3>
+        <p>اختيار اللون: 
+            <select>
+                <option>أحمر</option>
+                <option>وردي</option>
+                <option>أبيض</option>
+            </select>
+        </p>
+        <p>لون التغليف:
+            <select>
+                <option>وردي</option>
+                <option>أبيض</option>
+                <option>أحمر</option>
+            </select>
+        </p>
+        <p>الكمية: <input type="number" min="1" value="1"></p>
+        <button>أضف إلى السلة</button>
+    </div>
+</div>
+
+</body>
+</html>
